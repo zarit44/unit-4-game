@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>crystal game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  
+  
+ 
+    
+    
+</head>
+
+<body style="background: url(https://storage.needpix.com/rsynced_images/liquid-crystal-1454021227kgr.jpg)">
+    <h1>CRYSTAL COLLECTOR!</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                You will be given a random number at the start of the game.
+                <br>
+                There are four crystals. By clicking on a crystal, you will add a specific amount of points to your
+                total score.
+                <br>
+                You win the game by matching your total score to random number,
+                you lose the game if your total score goes above the random number.
+                <br>
+                The value of each crystal is hidden from you until you click on it.
+                <br>
+                Each time when the game starts, the game will change the values of each crystal.
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+            <div class="col-lg-4=">
+                Goodluck! :)
+                <br>
+                <img src="https://bloximages.newyork1.vip.townnews.com/postbulletin.com/content/tncms/assets/v3/editorial/b/60/b60a0993-01e8-5b59-82e0-c42b6b95965a/5a1c265fb6932.image.jpg?resize=1200%2C1150"
+                    class="img-thumbnail" height="200px" width="200px">
+                    <br>
+                    <h2>Random Number:  <span id ="baseNum"></span></h2>
+                   
+            </div>
+        </div>
+
+
+        <div class="row">
+                <div class="col-lg-12">
+                <button id="btnOne" class= "btn btn-primary"><img src="https://p.luckyretail.com/Uploadfile/20160530/002464/002464.jpg" class="img-thumbnail" height="100px" width="100px"></button>
+                
+                <button id="btnTwo" class= "btn btn-primary"><img src="https://vignette.wikia.nocookie.net/mgefanon/images/6/69/Kinetic_Crystal.jpg/revision/latest?cb=20150409231719" class="img-thumbnail" height="100px" width="100px"></button>
+                
+                <button id="btnThree" class= "btn btn-primary"><img src="https://smhttp-ssl-64693.nexcesscdn.net/media/catalog/product/cache/1/thumbnail/300x375/9df78eab33525d08d6e5fb8d27136e95/l/e/lemuriancrystal_2.jpg" class="img-thumbnail" height="100px" width="100px"></button>
+                
+                <button id="btnFour" class= "btn btn-primary"><img src="https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/8/180152.jpg" class="img-thumbnail" height="100px" width="100px"></button>
+                
+                
+            </div>
+    </div>
+    
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+var targetNum = Math.floor(Math.random()*20) + 100;;
+$("#baseNum").text(targetNum);
+
+  var counter = 0;
+  var numOptions = [1, 2, 3, 4];
+  var increment = numOptions[Math.round(Math.random()*1) + 1];
+
+  $("#btnOne").on("click", function() {
+
+    counter += 12;
+
+alert("Your score:" + counter);
+if (counter === targetNum){
+    alert("You win!");
+}
+
+else if (counter >= targetNum){
+    alert("You lose!");
+}
+
+
+});
+
+var counter = 0;
+  $("#btnTwo").on("click", function() {
+
+    counter +=8;
+
+alert("Your score:" + counter);
+if (counter === targetNum){
+    alert("you win!")
+}
+
+else if (counter >= targetNum){
+    alert("You lose!");
+}
+
+});
+
+var counter = 0;
+  $("#btnThree").on("click", function() {
+
+    counter +=6;
+
+alert("Your score:" + counter);
+if (counter === targetNum){
+    alert("you win!")
+}
+
+else if (counter >= targetNum){
+    alert("You lose!");
+}
+
+});
+
+var counter = 0;
+  $("#btnFour").on("click", function() {
+
+    counter +=11;
+
+alert("Your score:" + counter);
+if (counter === targetNum){
+    alert("you win!")
+}
+
+else if (counter >= targetNum){
+    alert("You lose!");
+}
+
+});
+  
+  
+  </script>
+ 
+</body>
+
+</html>
